@@ -11,6 +11,10 @@ public class Manager {
 
     }
 
+    public void showAllFileOne(File file) {
+        System.out.println("Show all" + file + "files");
+    }
+
     public void openFile(File file) {
         System.out.println("Open file " + file.getNameFile() + "(path = " + file.getPathFile() + ") using " + file.getApp());
 
@@ -18,6 +22,8 @@ public class Manager {
 
     public void deleteFile(File file) {
         System.out.println("Delete file " + file.getNameFile());
+        file = new File(null,0,null);
+        System.out.println(file.getNameFile());
     }
 
     public void shareFile(File nameFile, String shareWith, String application) {
@@ -25,13 +31,17 @@ public class Manager {
     }
 
 
-    public void moveFile(File nameFile, String nameFileNew) {
-        System.out.println(("Move file " + nameFile.getNameFile() + "(path = " + nameFile.getPathFile() + ")" + " to MyFile/Favorite (path = " + nameFileNew + ") successfully"));
+    public void moveFile(File file, String newPathFile) {
+        System.out.println(("Move file " + file.getNameFile() + "(path = " + file.getPathFile() + ")" + " to " + newPathFile + " (path = " + newPathFile + "/" + file.getNameFile() + ") successfully"));
+        file = new File(file.getNameFile(),newPathFile);
+        System.out.println("New path file = " + file.getLocationFile()+ "/" + file.getNameFile());
 
     }
 
-    public void renameFile(File nameFile, String change) {
-        System.out.println("Rename file " + nameFile.getNameFile() + "(path = " + nameFile.getPathFile() + ")" + " successfully. New name is " + change + "(path = MyFiles/Video/" + change + ")");
+    public void renameFile(File file, String nameChange) {
+        System.out.println("Rename file " + file.getNameFile() + "(path = " + file.getPathFile() + ")" + " successfully. New name is " + nameChange + "(path = " + file.getLocationFile() + "/" + nameChange + ")");
+         file = new File(nameChange);
+        System.out.println("FILE NAME NEW = " + file.getNameFile());
     }
 
 
