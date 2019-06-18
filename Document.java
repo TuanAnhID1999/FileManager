@@ -9,8 +9,5 @@ public class Document extends File {
 
     }
 
-    @Override
-    public String toString() {
-        return " Document ";
-    }
+
 }

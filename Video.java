@@ -9,8 +9,5 @@ public class Video extends File {
 
     }
 
-    @Override
-    public String toString() {
-        return " Video ";
-    }
+
 }

@@ -50,5 +50,23 @@ public class File {
         return appUse;
     }
 
+    public void setNameFile(String nameFile) {
+        this.nameFile = nameFile;
+    }
 
+    public void setSizeFile(float sizeFile) {
+        this.sizeFile = sizeFile;
+    }
+
+    public void setLocationFile(String locationFile) {
+        this.locationFile = locationFile;
+    }
+
+    public void setPathFile(String pathFile) {
+        this.pathFile = pathFile;
+    }
+
+    public void setAppUse(String appUse) {
+        this.appUse = appUse;
+    }
 }

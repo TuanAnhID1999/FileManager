@@ -9,8 +9,5 @@ public class Image extends File {
 
     }
 
-    @Override
-    public String toString() {
-        return " Image ";
-    }
+
 }
