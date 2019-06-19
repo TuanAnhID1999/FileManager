@@ -36,16 +36,19 @@ public class Manager {
 
     public void moveFile(File file, String newPathFile) {
         String oldFile = file.getPathFile();
-        file.setPathFile(newPathFile);
+        file.setLocationFile(newPathFile);
         System.out.println("Move file " + file.getNameFile() + " with path file (" + oldFile + ") to " + file.getPathFile() + " success ! " );
         System.out.println(file.getPathFile());
     }
 
+    // set name vs set loction thì set lại path
     public void renameFile( File file , String newNameChange) {
         String oldName = file.getNameFile();
+        String oldPath = file.getPathFile();
         file.setNameFile(newNameChange);
-        System.out.println("Rename file '" + oldName + "' to '" + newNameChange +  "' success ! ");
-        System.out.println(file.getNameFile());
+       // file.setPathFile( file.getLocationFile()+file.getNameFile());
+        System.out.println("Rename file '" + oldName + "' Old path '"+ oldPath + "' to '" +" New name '"+ file.getNameFile()+ "' New path '"+ file.getPathFile() +  "' success ! ");
+       // System.out.println("Name " + file.getNameFile()+ " location "+ file.getLocationFile() + " Path "+ file.getPathFile());
     }
 
 

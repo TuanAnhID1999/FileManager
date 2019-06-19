@@ -12,7 +12,7 @@ public class File {
         this.nameFile = nameFile;
         this.sizeFile = sizeFile;
         this.locationFile = locationFile;
-        this.pathFile = locationFile + "/" + nameFile;
+        this.setPathFile();
     }
 
 
@@ -42,6 +42,7 @@ public class File {
 
     public void setNameFile(String nameFile) {
         this.nameFile = nameFile;
+        this.setPathFile();
     }
 
     public void setSizeFile(float sizeFile) {
@@ -50,10 +51,11 @@ public class File {
 
     public void setLocationFile(String locationFile) {
         this.locationFile = locationFile;
+        this.setPathFile();
     }
 
-    public void setPathFile(String pathFile) {
-        this.pathFile = pathFile;
+    public void setPathFile() {
+        this.pathFile = this.locationFile + "/" + this.nameFile;
     }
 
     public void setAppUse(String appUse) {
