@@ -7,16 +7,6 @@ public class File {
     protected String pathFile;
     protected String appUse;
 
-    public File(String nameFile){
-        this.nameFile = nameFile;
-    }
-
-   public File(String nameFile, String locationFile){
-        this.nameFile = nameFile;
-        this.locationFile = locationFile;
-   }
-
-
 
     public File(String nameFile, float sizeFile, String locationFile) {
         this.nameFile = nameFile;
@@ -68,5 +58,16 @@ public class File {
 
     public void setAppUse(String appUse) {
         this.appUse = appUse;
+    }
+
+    @Override
+    public String toString() {
+        return "File{" +
+                "nameFile='" + nameFile + '\'' +
+                ", sizeFile=" + sizeFile +
+                ", locationFile='" + locationFile + '\'' +
+                ", pathFile='" + pathFile + '\'' +
+                ", appUse='" + appUse + '\'' +
+                '}';
     }
 }

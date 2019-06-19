@@ -2,6 +2,12 @@ package FileManager;
 
 public class Manager {
 
+    public static  final String ALLFILE = "";
+    public static  final String MUSSIC = "Music";
+    public static  final String VIDEO = "Video";
+    public static  final String DOCUMENT = "Document";
+    public static  final String IMAGE = "Image";
+
 
     public void showAllFile(String fileTypes) {
         System.out.println("Show all files " + fileTypes);
@@ -20,7 +26,7 @@ public class Manager {
     }
 
     public void detailsFile(File file){
-        System.out.println("file information {" + " fileName="+ file.getNameFile() + ", fileSize = "+ file.getSizeFile()+ ", fileLocation = " + file.locationFile + ", filePath ="+ file.getPathFile()+ ", openApp=" + file.getApp() + "}");
+        System.out.println(file.toString());
     }
 
     public void shareFile(File nameFile, String shareWith, String application) {
